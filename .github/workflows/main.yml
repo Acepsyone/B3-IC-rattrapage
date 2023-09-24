@@ -1,0 +1,27 @@
+name: Mon Workflow
+
+ 
+
+on:
+  push:
+    branches:
+      - main  
+
+ 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+ 
+
+    steps:
+    - name: Checkout du code
+      uses: actions/checkout@v2
+
+ 
+
+    - name: Exécuter le script .sh
+      run: |
+        chmod +x coucou.sh  # Donner les permissions d'exécution
+        ./coucou.sh  # Exécuter le script
